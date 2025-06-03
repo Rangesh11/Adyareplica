@@ -1,8 +1,8 @@
 
-import about from '../assets/about.png';
+import about from '../../assets/about.png';
 
-import aboutbg from '../assets/Aboutadyabg.png';
-import aboutrigth from '../assets/aboutadyaright.png'
+import aboutbg from '../../assets/Aboutadyabg.png';
+import aboutrigth from '../../assets/aboutadyaright.png'
 
 const Aboutadya = () => {
   return (

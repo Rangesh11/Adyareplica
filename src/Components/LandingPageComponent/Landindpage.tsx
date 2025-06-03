@@ -1,7 +1,7 @@
 
 import Header from './Header'
 import Intropage from './Intropage'
-import Detailpage from './Detailpage'
+import Detailpage from '../../Pages/Detailpage'
 
 
 const Landindpage = () => {

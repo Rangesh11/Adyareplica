@@ -1,6 +1,6 @@
 
 import Showdemo from './Showdemo';
-import finalbg from '../assets/Finalcompoentbg.webp';
+import finalbg from '../../assets/Finalcompoentbg.webp';
 
 const Finaldetail = () => {
   return (

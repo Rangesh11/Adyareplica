@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ChevronDown, User, LayoutGrid, Wand2, Cloud, ShoppingBag, Menu, X } from 'lucide-react'
-import adyaLogo from '../assets/adya_logo.png'
+import adyaLogo from '../../assets/adya_logo.png'
 import Showdemo from './Showdemo'
 
 const Header = () => {
@@ -82,6 +82,11 @@ const Header = () => {
           ))}
           <button className="hover:text-blue-400 transition-colors">Company</button>
         </nav>
+
+        {/* Showdemo button for desktop */}
+        <div className="hidden md:flex items-center">
+          <Showdemo />
+        </div>
 
         {/* Mobile: Showdemo button left of menu icon */}
         <div className="flex md:hidden items-center gap-2 ml-auto">

@@ -1,11 +1,13 @@
+
+
 const Vanjivideo = () => {
   return (
     <video
-      src="https://drive.google.com/uc?export=download&id=1dt1NYwilEI7ApqWs5TdM0uykoMzA8lwh"
+      src={"https://adyaweb.s3.ap-south-1.amazonaws.com/vanji.mp4"}
       className="w-full max-w-5xl rounded-xl shadow-lg"
       controls
     />
-  )
+  );
 }
 
-export default Vanjivideo
+export default Vanjivideo;

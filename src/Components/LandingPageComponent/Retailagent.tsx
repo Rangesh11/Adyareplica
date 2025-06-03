@@ -1,7 +1,7 @@
-import RetailIamge from '../assets/Retal-market.png';
-import retailleftbg from '../assets/retailleftbg.png';
-import retairightbg from '../assets/retailrightbg.png';
-import retailcenterbg from '../assets/retailcenterbg.png';
+import RetailIamge from '../../assets/Retal-market.png';
+import retailleftbg from '../../assets/retailleftbg.png';
+import retairightbg from '../../assets/retailrightbg.png';
+import retailcenterbg from '../../assets/retailcenterbg.png';
 
 const Retailagent = () => {
   return (

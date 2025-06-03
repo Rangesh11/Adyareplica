@@ -1,5 +1,5 @@
+import demoImage from '../../assets/ShowDemobg.webp';
 
-import demoImage from '../assets/ShowDemobg.webp';
 
 const Leftpannal = () => {
   return (

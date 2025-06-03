@@ -1,6 +1,6 @@
-import adyalogo from "../assets/adya_logo.png";
-import footer1 from "../assets/footerimage1.svg";
-import footer2 from "../assets/footerimage2.svg";
+import adyalogo from "../../assets/adya_logo.png";
+import footer1 from "../../assets/footerimage1.svg";
+import footer2 from "../../assets/footerimage2.svg";
 
 const Footer = () => {
   return (

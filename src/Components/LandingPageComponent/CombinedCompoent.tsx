@@ -1,8 +1,10 @@
 
-import eye from '../assets/eye-logo.svg';
+import eye from '../../assets/eye-logo.svg';
+
 import Vanjivideo from "./Vanjivideo";
-import CombineCompoentBgRight from "../assets/CombineCompoentbg-right.png";
-import CombineCompoentbgLeft from "../assets/CombineCompoentbg-left.png";
+import CombineCompoentBgRight from "../../assets/CombineCompoentbg-right.png";
+import CombineCompoentbgLeft from "../../assets/CombineCompoentbg-left.png";
+
 
 const CombinedCompoent = () => {
   return (

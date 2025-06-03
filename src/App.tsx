@@ -1,8 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-
-import Landindpage from './LandingPageComponent/Landindpage'
-import DemoPage from './Showdemocomponent/DemoPage'
+import Landindpage from './Components/LandingPageComponent/Landindpage'
+import DemoPage from './Pages/DemoPage'
 
 
 function App() {

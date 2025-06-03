@@ -1,5 +1,5 @@
-import Intropagebg from '../assets/Intropagebg.webp'
-import demo_logo from "../assets/demo_logo.svg"
+import Intropagebg from '../../assets/Intropagebg.webp'
+import demo_logo from "../../assets/demo_logo.svg"
 import { useNavigate } from "react-router-dom";
 
 

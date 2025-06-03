@@ -1,13 +1,13 @@
-import Featurepage from './Featurepage';
-import RetailAgent from './Retailagent';
-import Studio from './Studio';
+import Featurepage from '../Components/LandingPageComponent/Featurepage';
+import RetailAgent from '../Components/LandingPageComponent/Retailagent';
+import Studio from '../Components/LandingPageComponent/Studio';
 import { platforms } from '../Constant/Studiodata';
-import Aboutadya from './Aboutadya';
-import Finaldetail from './Finaldetail';
-import Footer from './Footer';
+import Aboutadya from '../Components/LandingPageComponent/Aboutadya';
+import Finaldetail from '../Components/LandingPageComponent/Finaldetail';
+import Footer from '../Components/LandingPageComponent/Footer';
 import bgMagic from '../assets/studiobg.png';
-import TrustedBy from './TrustedBy';
-import CombinedCompoent from './CombinedCompoent';
+import TrustedBy from '../Components/LandingPageComponent/TrustedBy';
+import CombinedCompoent from '../Components/LandingPageComponent/CombinedCompoent';
 
 const Detailpage = () => {
   return (

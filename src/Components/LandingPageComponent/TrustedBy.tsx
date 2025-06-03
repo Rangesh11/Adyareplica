@@ -1,10 +1,11 @@
 import { useRef, useEffect, useState } from 'react';
 import Trustbycard from './Trustbycard';
-import trustbg from '../assets/Trustcompoentbg.png';
-import logo1 from "../assets/Trustedbyimages/company1.svg";
-import logo2 from "../assets/Trustedbyimages/comapany2.svg";
-import logo3 from "../assets/Trustedbyimages/company3.svg";
-import logo4 from "../assets/Trustedbyimages/company4.svg";
+import trustbg from '../../assets/Trustcompoentbg.png';
+import logo1 from "../../assets/Trustedbyimages/company1.svg";
+import logo2 from "../../assets/Trustedbyimages/comapany2.svg";
+import logo3 from "../../assets/Trustedbyimages/company3.svg";
+import logo4 from "../../assets/Trustedbyimages/company4.svg";
+
 
 const logos = [
   { image: logo1, alt: 'Logo 1' },
