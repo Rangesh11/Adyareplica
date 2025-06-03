@@ -1,6 +1,6 @@
-import React from 'react';
+
 import about from '../assets/about.png';
-import bgcolor from '../assets/bg-color.png';
+
 import aboutbg from '../assets/Aboutadyabg.png';
 import aboutrigth from '../assets/aboutadyaright.png'
 

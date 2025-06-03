@@ -1,4 +1,4 @@
-import React from "react";
+
 import { useNavigate } from "react-router-dom";
 import { X } from "lucide-react"; // Lucide icon
 

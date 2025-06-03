@@ -1,13 +1,12 @@
-import React from 'react'
-import vanji from '../assets/vanji.mp4'
+
 
 const Vanjivideo = () => {
   return (
-  <video
-  src={vanji}
-  className="w-full max-w-5xl rounded-xl shadow-lg"
-  controls
-/>
+    <video
+      src="https://drive.google.com/uc?export=download&id=1Jyw7aTcTgaTyORlb8rGwLByEUDJCzqdr"
+      className="w-full max-w-5xl rounded-xl shadow-lg"
+      controls
+    />
   )
 }
 

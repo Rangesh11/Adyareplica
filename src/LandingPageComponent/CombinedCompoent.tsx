@@ -1,4 +1,4 @@
-import React from "react";
+
 import eye from '../assets/eye-logo.svg';
 import Vanjivideo from "./Vanjivideo";
 import CombineCompoentBgRight from "../assets/CombineCompoentbg-right.png";

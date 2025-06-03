@@ -1,4 +1,3 @@
-import React from 'react';
 
 const FeatureCard = ({ icon, text }: any) => (
   <div className="h-40 w-72 flex flex-col gap-6 items-center justify-around overflow-hidden bg-transparent">

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import Trustbycard from './Trustbycard';
 import trustbg from '../assets/Trustcompoentbg.png';
 import logo1 from "../assets/Trustedbyimages/company1.svg";

@@ -1,4 +1,3 @@
-import eye from '../assets/eye-logo.svg';
 
 import Featurepage from './Featurepage';
 import RetailAgent from './Retailagent';

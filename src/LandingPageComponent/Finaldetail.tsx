@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Showdemo from './Showdemo';
 import finalbg from '../assets/Finalcompoentbg.webp';
 

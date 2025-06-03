@@ -12,7 +12,7 @@ const Intropage = () => {
       style={{ backgroundImage: `url(${Intropagebg})` }}
     >
       <div 
-        className="absolute inset-x-0 flex flex-col items-center justify-center sm:justify-start pt-0 sm:pt-[200px] pb-[80px] h-full"
+        className="absolute inset-x-0 flex flex-col items-center justify-center sm:justify-start pt-0 sm:pt-[200px] pb-[80px] h-full z-40"
         style={{ top: 0, bottom: 'auto' }}
       >
         <p
