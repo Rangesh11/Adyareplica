@@ -1,4 +1,3 @@
-
 import Featurepage from './Featurepage';
 import RetailAgent from './Retailagent';
 import Studio from './Studio';
@@ -63,7 +62,7 @@ const Detailpage = () => {
           className="absolute bottom-0 left-0 w-full pointer-events-none select-none z-0"
           style={{ objectFit: 'cover', maxHeight: '100vh' }}
         />
-        <div className="relative z-10 flex flex-col items-center gap-10 w-full">
+        <div className="relative z-10 flex flex-col items-center gap-10 w-full px-4 sm:px-6 md:px-8">
           {platforms.map((item, idx) => (
             <Studio
               key={idx}

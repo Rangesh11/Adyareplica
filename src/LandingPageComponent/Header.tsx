@@ -1,94 +1,35 @@
-import  { useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ChevronDown, User, LayoutGrid, Wand2, Cloud, ShoppingBag } from 'lucide-react'
+import { ChevronDown, User, LayoutGrid, Wand2, Cloud, ShoppingBag, Menu, X } from 'lucide-react'
 import adyaLogo from '../assets/adya_logo.png'
 import Showdemo from './Showdemo'
 
 const Header = () => {
   const [hoveredMenu, setHoveredMenu] = useState<string | null>(null)
+  const [mobileOpen, setMobileOpen] = useState(false)
 
   const platformItems = [
-    {
-      icon: User,
-      title: "Agent Studio",
-      description: "Turn enterprise workflows into AI-powered agents and copilots.",
-    },
-    {
-      icon: LayoutGrid,
-      title: "App Studio",
-      description: "Ideas to Applications in Minutes. Deploy Anywhere. No Code Needed.",
-    },
-    {
-      icon: Wand2,
-      title: "Model Studio",
-      description: "Build, fine-tune, and scale LLMs - elegantly tailored to your business.",
-    },
-    {
-      icon: Cloud,
-      title: "Cloud Studio",
-      description: "Flexible AI deployment - optimized to scale on any cloud or on-premises.",
-    },
-    {
-      icon: ShoppingBag,
-      title: "AI Marketplace",
-      description: "Your AI destination for enterprise-ready solutions, deployed in minutes.",
-    },
+    { icon: User, title: "Agent Studio", description: "Turn enterprise workflows into AI-powered agents and copilots." },
+    { icon: LayoutGrid, title: "App Studio", description: "Ideas to Applications in Minutes. Deploy Anywhere. No Code Needed." },
+    { icon: Wand2, title: "Model Studio", description: "Build, fine-tune, and scale LLMs - elegantly tailored to your business." },
+    { icon: Cloud, title: "Cloud Studio", description: "Flexible AI deployment - optimized to scale on any cloud or on-premises." },
+    { icon: ShoppingBag, title: "AI Marketplace", description: "Your AI destination for enterprise-ready solutions, deployed in minutes." },
   ]
 
   const productsItems = [
-    {
-      icon: User,
-      title: "AI Sales Rep",
-      description: "Turn Conversations into Conversions with an AI Sales Rep That Never Sleeps.",
-    },
-    {
-      icon: LayoutGrid,
-      title: "AI Marketer",
-      description: "AI-Powered Marketer That Drives Engagement, Leads, and Growth — Automatically.",
-    },
-    {
-      icon: Wand2,
-      title: "AI Data Analyst",
-      description: "Automated Analysis. Actionable Insights. No Delay. No Guesswork.",
-    },
-    {
-      icon: Cloud,
-      title: "AI Support Agent",
-      description: "AI-Powered Customer Service That Delivers at Every Touchpoint.",
-    },
-    {
-      icon: ShoppingBag,
-      title: "AI Recruiter",
-      description: "Screen, Shortlist, and Schedule—Your AI Recruiter Handles It All.",
-    },
+    { icon: User, title: "AI Sales Rep", description: "Turn Conversations into Conversions with an AI Sales Rep That Never Sleeps." },
+    { icon: LayoutGrid, title: "AI Marketer", description: "AI-Powered Marketer That Drives Engagement, Leads, and Growth — Automatically." },
+    { icon: Wand2, title: "AI Data Analyst", description: "Automated Analysis. Actionable Insights. No Delay. No Guesswork." },
+    { icon: Cloud, title: "AI Support Agent", description: "AI-Powered Customer Service That Delivers at Every Touchpoint." },
+    { icon: ShoppingBag, title: "AI Recruiter", description: "Screen, Shortlist, and Schedule—Your AI Recruiter Handles It All." },
   ]
 
   const industriesItems = [
-    {
-      icon: User,
-      title: "Healthcare",
-      description: "AI agents that support patients, streamline operations, and assist clinicians—24/7, with precision.",
-    },
-    {
-      icon: LayoutGrid,
-      title: "Banking & Finance",
-      description: "Automate onboarding, research, and personalize financial services with intelligent AI agents.",
-    },
-    {
-      icon: Wand2,
-      title: "Retail & Ecommerce",
-      description: "Deliver personalized shopping experiences, automate support, and optimize operations with AI agents.",
-    },
-    {
-      icon: Cloud,
-      title: "Education & Edtech",
-      description: "Empower learners and educators with AI tutors, enrollment assistants, and content generators.",
-    },
-    {
-      icon: ShoppingBag,
-      title: "Hiring & Recruitment",
-      description: "Streamline hiring, onboarding, and internal support with intelligent AI recruiters and HR agents.",
-    },
+    { icon: User, title: "Healthcare", description: "AI agents that support patients, streamline operations, and assist clinicians—24/7, with precision." },
+    { icon: LayoutGrid, title: "Banking & Finance", description: "Automate onboarding, research, and personalize financial services with intelligent AI agents." },
+    { icon: Wand2, title: "Retail & Ecommerce", description: "Deliver personalized shopping experiences, automate support, and optimize operations with AI agents." },
+    { icon: Cloud, title: "Education & Edtech", description: "Empower learners and educators with AI tutors, enrollment assistants, and content generators." },
+    { icon: ShoppingBag, title: "Hiring & Recruitment", description: "Streamline hiring, onboarding, and internal support with intelligent AI recruiters and HR agents." },
   ]
 
   const navMenus = [
@@ -105,7 +46,7 @@ const Header = () => {
           <img src={adyaLogo} alt="Adya Logo" className="h-10" />
         </Link>
 
-        {/* Navigation */}
+        {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-10 ml-auto mr-10 text-white">
           {navMenus.map((menu) => (
             <div
@@ -139,14 +80,47 @@ const Header = () => {
               )}
             </div>
           ))}
-
-          {/* Company link */}
           <button className="hover:text-blue-400 transition-colors">Company</button>
         </nav>
 
-        {/* Schedule Demo */}
-        <Showdemo />
+        {/* Mobile: Showdemo button left of menu icon */}
+        <div className="flex md:hidden items-center gap-2 ml-auto">
+          <Showdemo />
+          <button
+            className="text-white"
+            onClick={() => setMobileOpen(true)}
+            aria-label="Open menu"
+          >
+            <Menu className="w-8 h-8" />
+          </button>
+        </div>
       </div>
+
+      {/* Mobile Navigation Drawer */}
+      {mobileOpen && (
+        <div className="fixed inset-0 bg-[#0a0a0a] bg-opacity-95 z-50 flex flex-col">
+          <div className="flex items-center justify-between px-6 py-4 border-b border-gray-700">
+            <img src={adyaLogo} alt="Adya Logo" className="h-10" />
+            <button
+              className="text-white"
+              onClick={() => setMobileOpen(false)}
+              aria-label="Close menu"
+            >
+              <X className="w-8 h-8" />
+            </button>
+          </div>
+          <nav className="flex flex-col gap-6 px-8 py-8 text-white text-lg">
+            {/* Only show main topics in mobile nav */}
+            {navMenus.map((menu) => (
+              <div key={menu.title} className="flex items-center gap-2 mb-2">
+                <span>{menu.title}</span>
+                <ChevronDown className="w-4 h-4" />
+              </div>
+            ))}
+            <Link to="/company" className="hover:text-blue-400 transition-colors">Company</Link>
+          </nav>
+        </div>
+      )}
     </header>
   )
 }
