@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { X } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setFormData } from '../../redux/formSlice';
 import type { AppDispatch } from "../../redux/store";
@@ -25,6 +25,13 @@ const Form = () => {
 
   const [success, setSuccess] = useState(false);
 
+  useEffect(() => {
+    const storedData = localStorage.getItem('formData');
+    if (storedData) {
+      setFormDataState(JSON.parse(storedData));
+    }
+  }, []);
+
   const handleExit = () => navigate("/");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -39,6 +46,7 @@ const Form = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     dispatch(setFormData(formData));
+    localStorage.setItem('formData', JSON.stringify(formData)); // Save to localStorage
     setSuccess(true);
     setTimeout(() => setSuccess(false), 3000);
   };
